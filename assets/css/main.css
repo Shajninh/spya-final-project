@@ -20,22 +20,22 @@
 
 /* Global Colors */
 :root { 
-  --background-color: #ffffff; 
+  --background-color: #1A1D20; 
   --default-color: #444444; 
-  --heading-color: #37423b; 
-  --accent-color: #5fcf80; 
+  --heading-color: #ffffff; 
+  --accent-color: #D32F2F; 
   --surface-color: #ffffff; 
-  --contrast-color: #ffffff; 
+  --contrast-color: #1A1D20; 
 }
 
 /* Nav Menu Colors */
 :root {
-  --nav-color: #272828;  
-  --nav-hover-color: #5fcf80; 
+  --nav-color: #D32F2F;  
+  --nav-hover-color: white; 
   --nav-mobile-background-color: #ffffff; 
   --nav-dropdown-background-color: #ffffff; 
   --nav-dropdown-color: #272828; 
-  --nav-dropdown-hover-color: #5fcf80; 
+  --nav-dropdown-hover-color: #303c34; 
 }
 
 /* Color Presets */
