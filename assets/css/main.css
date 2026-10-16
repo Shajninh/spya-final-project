@@ -818,3 +818,71 @@ section,
 .about .content .read-more:hover i {
   margin-left: 10px;
 }
+
+.sport{
+  position: relative;
+  display: flex;
+  max-width: 300px;
+  min-height: 100px;
+  z-index: 4;
+  justify-content: center;
+  align-items: center;
+  color: #e52e26;
+}
+
+.grid{
+  z-index: 3;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 300px); 
+  justify-content: center;
+} 
+
+#football{
+  background-image: url(footballPhoto.jpg);
+  background-size: cover;
+}
+
+#basketball{
+  background-image: url(basketballPhoto.jpg);
+  background-size: cover;
+}
+
+#lacrosse{
+  background-image: url(lacrossePhoto.jpg);
+  background-size: cover;
+}
+
+#soccer{
+  background-image: url(soccerPhoto.jpg);
+  background-size: cover;
+}
+
+#baseball{
+  background-image: url(baseballPhoto.jpg);
+  background-size: cover;
+}
+
+#softball{
+  background-image: url(softballPhoto.jpg);
+  background-size: cover;
+}
+
+#field-hockey{
+  background-image: url(fieldHockeyPhoto.jpg);
+  background-size: cover;
+
+}
+
+#cheerleading{
+  background-image: url(cheerPhoto.jpg);
+  background-size: cover;
+
+}
+
+#flag-football{
+  background-image: url(flagFootballPhoto.jpg);
+  background-size: cover;
+
+}
+
