@@ -838,7 +838,7 @@ section,
   justify-content: center;
 } 
 
-#football{
+#footballLabel{
   background-image: url(footballPhoto.jpg);
   background-size: cover;
 }
@@ -886,3 +886,14 @@ section,
 
 }
 
+.ymR7fe {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: min-content minmax(100px, auto) min-content;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    min-width: 300px;
+    box-sizing: border-box;
+    padding-inline: 12px;
+}
