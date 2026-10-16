@@ -39,3 +39,8 @@ This repository contains a modern, responsive web application prototype for the 
 Open the project folder in Visual Studio Code.
 Install the Live Server extension (if not already installed).
 Right-click index.html and select "Open with Live Server".
+
+Also, viewable at this link: https://shajninh.github.io/spya-final-project/
+
+## Future improvements 
+We plan on fixing the content being outputted aesthetics wise, and making sure that the way it is being displayed is efficient. We also plan on making sure each site feels consistently interactive. 
