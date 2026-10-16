@@ -38,17 +38,65 @@
 
 <body class="index-page">
 
+
+<!-- Giveaway Modal -->
+<div id="giveawayModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
+  <div style="background:#fff; padding:30px; border-radius:10px; max-width:400px; text-align:center; position:relative; font-family:sans-serif;">
+    <span onclick="closeModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px; font-weight:bold;">&times;</span>
+    <h2 style="margin-top:0; color:#D32F2F;">🎉 SPYA Giveaway!</h2>
+    <p>Enter our giveaway to win exclusive Parkland sports gear!</p>
+    <a href="events.html" style="background:#D32F2F; color:#fff; text-decoration:none; padding:10px 20px; border-radius:5px; display:inline-block; font-weight:bold;">Yes, Take Me There!</a>
+  </div>
+</div>
+
+<!-- ================= GIVEAWAY MODAL ================= -->
+<div id="giveaway" style="display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.75); z-index: 99999; align-items: center; justify-content: center; padding: 20px;">
+  <div style="background: #370202; padding: 35px 25px; border-radius: 12px; max-width: 420px; width: 100%; text-align: center; position: relative; font-family: sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
+    
+    <!-- Close Button (X) -->
+    <span onclick="closeModal()" style="position: absolute; top: 12px; right: 18px; cursor: pointer; font-size: 26px; font-weight: bold; color: #666; line-height: 1;">&times;</span>
+    
+    <!-- Content -->
+    <h2 style="margin-top: 0; margin-bottom: 12px; color: white; font-size: 24px; font-weight: 700;">🏈 SPYA GIVEAWAY!</h2>
+    <p style="color: white; font-size: 14px; margin-bottom: 25px; line-height: 1.5; font-family: 'Arial'">Enter our giveaway for a chance to win 4 Eagles tickets. <br> 2 Winners will be selected. Section 107, Row 17. <br>Drawing November 8th!</p>
+    
+    <!-- Button linked to page on navbar -->
+    <a href="events.html" onclick="closeModal()" style="background: #D32F2F; color: #ffffff; text-decoration: none; padding: 12px 28px; border-radius: 50px; font-weight: bold; font-size: 15px; display: inline-block;">
+      Yes, Take Me There!
+    </a>
+    
+  </div>
+</div>
+
+<script>
+
+  setTimeout(function() {
+    var modal = document.getElementById('giveaway');
+    if (modal) {
+      modal.style.display = 'flex';
+    }
+  }, 5000); // 5 seconds
+
+  function closeModal() {
+    var modal = document.getElementById('giveaway');
+    if (modal) {
+      modal.style.display = 'none';
+    }
+    sessionStorage.setItem('hideGiveaway', 'true');
+  }
+</script>
+
+
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-<h1 class="sitename" style="position: relative; margin: 0; padding: 0;">
-  <img src="assets/img/logo.png" alt="SPYA Allentown Logo" style="height: 190px; width: auto; position: absolute; top: 50%; transform: translateY(-50%); z-index: 10;">
-</h1>
+      <h1 class="sitename" style="position: relative; margin: 0; padding: 0;">
+        <img src="assets/img/logo.png" alt="SPYA Allentown Logo" style="height: 190px; width: auto; position: absolute; top: 50%; transform: translateY(-50%); z-index: 10;">
+      </h1>
       </a>
-
+      
+      <!-- nav bar -->
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" class="active">Home<br></a></li>
@@ -113,16 +161,16 @@
           </div>
 
           <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
-            <h3>Voluptatem dignissimos provident quasi corporis</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            <h3>Who are we?</h3>
+            <p class="fst-italic" style="color:white">
+            South Parkland Youth Association is a non-profit, volunteer organization whose mission it is to
+             provide our neighborhood youth with an opportunity to develop teamwork, sportsmanship, character, 
+             and community spirit through the challenge and enjoyment of team sports. Our chief goal is to create 
+             a culture where kids love to participate in sports, and feel proud to wear an SPYA uniform. We are located in Allentown, PA.
+             <br><br>
+             For more information about when registration is available for the various sports that we offer, click the button below.
             </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
-            </ul>
+
             <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
 
