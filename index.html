@@ -38,16 +38,32 @@
 
 <body class="index-page">
 
+<!-- used Gemini AI for football -->
 
-<!-- Giveaway Modal -->
-<div id="giveawayModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
-  <div style="background:#fff; padding:30px; border-radius:10px; max-width:400px; text-align:center; position:relative; font-family:sans-serif;">
-    <span onclick="closeModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px; font-weight:bold;">&times;</span>
-    <h2 style="margin-top:0; color:#D32F2F;">🎉 SPYA Giveaway!</h2>
-    <p>Enter our giveaway to win exclusive Parkland sports gear!</p>
-    <a href="events.html" style="background:#D32F2F; color:#fff; text-decoration:none; padding:10px 20px; border-radius:5px; display:inline-block; font-weight:bold;">Yes, Take Me There!</a>
-  </div>
-</div>
+
+<!-- Football Scroll CSS -->
+<style>
+  .scroll-football {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    z-index: 999;
+    pointer-events: none;
+    opacity: 0; /* Hidden by default until middle of page */
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-out, transform 0.1s ease-out;
+  }
+</style>
+
+<!-- Animated Football Image -->
+<img 
+  src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" 
+  alt="Football" 
+  id="football" 
+  class="scroll-football"
+/>
 
 <!-- ================= GIVEAWAY MODAL ================= -->
 <div id="giveaway" style="display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.75); z-index: 99999; align-items: center; justify-content: center; padding: 20px;">
@@ -137,7 +153,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-vid.mp4" alt="" data-aos="fade-in">
+      <img src="assets/img/kick.jpg" alt="" data-aos="fade-in">
 
       <div class="container">
         <h2 data-aos="fade-up" data-aos-delay="100">Play Hard. Grow Together.<br>Southern Parkland Youth Association</h2>
@@ -157,7 +173,7 @@
         <div class="row gy-4">
 
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="assets/img/girls-lax.jpg" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
@@ -189,12 +205,12 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Mentor</span>
+            <span class="sitename"; style="color:black">Address</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p>360 Grange Rd.</p>
+            <p>Allentown, PA 18069</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>lorem</span></p>
             <p><strong>Email:</strong> <span>info@example.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
@@ -206,7 +222,7 @@
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
+          <h4 style="color:black">Useful Links</h4>
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About us</a></li>
@@ -216,33 +232,23 @@
           </ul>
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
 
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
-        </div>
+<div class="col-lg-4 col-md-12 footer-newsletter ms-auto">
+  <h4 style="color:black">Our Newsletter</h4>
+  <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+  <form action="forms/newsletter.php" method="post" class="php-email-form">
+    <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+    <div class="loading">Loading</div>
+    <div class="error-message"></div>
+    <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+  </form>
+</div>
 
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mentor</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">SPYA</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
@@ -267,6 +273,9 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- External JavaScript File -->
+  <script src="script.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>

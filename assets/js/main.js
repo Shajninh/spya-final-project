@@ -136,3 +136,35 @@
   window.addEventListener("load", initSwiper);
 
 })();
+
+// used Gemini AI for football animations
+
+const football = document.getElementById('football');
+
+function updateFootballPosition() {
+  const scrollY = window.scrollY;
+  const maxScrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  
+  // Define when the animation triggers (middle of page height)
+  const startScroll = maxScrollableHeight * 0.7; // Starts appearing around 30% down
+  const endScroll = maxScrollableHeight * 1;   // Reaches the center around 70% down
+
+  if (scrollY < startScroll) {
+    // Hide ball if above trigger point
+    football.style.opacity = '0';
+    football.style.transform = `translate(0vw, -50%) rotate(0deg)`;
+  } else {
+    // Calculate progress (0 to 1) between startScroll and endScroll
+    const progress = Math.min(Math.max((scrollY - startScroll) / (endScroll - startScroll), 0), 1);
+
+    const currentX = progress * 50; // Move from 0vw to 50vw (center)
+    const rotation = progress * -360; // Rotation angle
+
+    football.style.opacity = '1';
+    football.style.transform = `translate(${currentX}vw, -50%) rotate(${rotation}deg)`;
+  }
+}
+
+window.addEventListener('scroll', () => {
+  requestAnimationFrame(updateFootballPosition);
+});
