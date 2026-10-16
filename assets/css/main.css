@@ -848,6 +848,10 @@ section,
   background-size: cover;
 }
 
+.underline{
+  text-decoration: underline;
+}
+
 #lacrosse{
   background-image: url(lacrossePhoto.jpg);
   background-size: cover;
