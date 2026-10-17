@@ -168,3 +168,35 @@ function updateFootballPosition() {
 window.addEventListener('scroll', () => {
   requestAnimationFrame(updateFootballPosition);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const accordionHeaders = document.querySelectorAll('.accordion-container .accordion-header');
+
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const currentItem = header.parentElement;
+      const content = currentItem.querySelector('.accordion-content');
+      const isOpen = currentItem.classList.contains('active');
+
+      // Close all other open accordion items
+      document.querySelectorAll('.accordion-container .accordion-item').forEach(item => {
+        if (item !== currentItem) {
+          item.classList.remove('active');
+          item.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+          item.querySelector('.accordion-content').style.maxHeight = null;
+        }
+      });
+
+      // Toggle clicked section
+      if (isOpen) {
+        currentItem.classList.remove('active');
+        header.setAttribute('aria-expanded', 'false');
+        content.style.maxHeight = null;
+      } else {
+        currentItem.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+});
