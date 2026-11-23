@@ -1068,3 +1068,23 @@ section,
   color: #ef5350;
   text-decoration: underline;
 }
+
+.spyaImage {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Controls the exact spacing between every row */
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Equal spacing between each label and its input */
+}
