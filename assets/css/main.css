@@ -571,6 +571,14 @@ h6 {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+.name{
+  border: 0;
+  padding: 4px 8px;
+  width: 100%;
+  background-color: var(--surface-color);
+  color: var(--default-color);
+}
+
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
